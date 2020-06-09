@@ -8,8 +8,6 @@ switch(comando) {
 
     case 'crear':
         let todo = toDo.crear(argv.descripcion);
-        console.log(todo);
-        
         break;
 
     case 'listar':
