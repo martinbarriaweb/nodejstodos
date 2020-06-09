@@ -1,5 +1,4 @@
-const argv = required('yargs').argv;
-
+const argv = require('./config/yargs').argv;
 
 
 let comando = argv._[0];
@@ -10,8 +9,8 @@ switch(comando) {
         console.log('Crear TODO');
         break;
 
-    case 'crear':
-        console.log('Crear TODO');
+    case 'listar':
+        console.log('Listar TODO');
         break;
     case 'actualizar':
         console.log('Actualizar TODO');
@@ -19,8 +18,6 @@ switch(comando) {
     default:
         console.log('Comando no reconocido');
         
-        
-
 
 }
 
