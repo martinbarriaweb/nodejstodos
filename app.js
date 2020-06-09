@@ -10,8 +10,8 @@ switch(comando) {
         let todo = toDo.crear(argv.descripcion);
         break;
 
-    case 'listar':
-        console.log('Listar TODO');
+    case 'list':
+        let list = toDo.getList();
         break;
     case 'actualizar':
         console.log('Actualizar TODO');

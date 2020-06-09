@@ -1,4 +1,5 @@
 const fs = require('fs');
+const colors = require('colors');
 
 let listToDo = [];
 
@@ -33,6 +34,16 @@ const crear = (descripcion) => {
     return listToDo;
 }
 
+const getList = () => {
+    const list = require('../db/db.json');
+    list.forEach(element => {
+        console.log('=======POR HACER======'.green);
+        console.log(element.descripcion.red);
+        console.log(`Estado: `, element.completado);
+   });
+}
+
 module.exports = {
-    crear
+    crear,
+    getList
 }
