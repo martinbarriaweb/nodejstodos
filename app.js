@@ -9,12 +9,14 @@ switch(comando) {
     case 'crear':
         let todo = toDo.crear(argv.descripcion);
         break;
-
     case 'list':
         let list = toDo.getList();
         break;
-    case 'actualizar':
-        console.log('Actualizar TODO');
+    case 'update':
+        let updated = toDo.update(argv.descripcion, argv.completado);
+        break;
+    case 'delete':
+        let deleteTask = toDo.deleteTask(argv.descripcion);
         break;
     default:
         console.log('Comando no reconocido');

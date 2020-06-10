@@ -7,7 +7,14 @@ const argv = require('yargs')
         desc: 'Descripcion de tarea'
     }
 })
-.command('actualizar', 'Actualiza un elemento todo', {
+.command('delete', 'Eliminar Todo', {
+    descripcion: {
+        demand: true,
+        alias: 'd',
+        desc: 'Descripcion de tarea'
+    }
+})
+.command('update', 'Actualiza un elemento todo', {
     descripcion: {
         demand: true,
         alias: 'd',
